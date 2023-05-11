@@ -6,34 +6,45 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 
-/**can modify below this line */
+/**can modify below this line 
+ * "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_model_year": "2015",
+    "color": "Black",
+    "mileage": "35555",
+    "price": "27150.98",
+    "condition": "Certified Pre-Owned",
+    "id": 1,
+    "image":
+*/
 
 import React, {useState} from "react";
 
-function Car() {
-  const [showForm, setShowForm] = useState(false);
+function Car({ car }) {
+
+  const [showForm, setShowForm] = useState(false)
 
   return (
     <Grid item xs={2} sm={4} md={4}>
       {/**can edit below this */}
       {!showForm ? (
         <Card sx={{maxWidth: 350, height: 600}}>
-          <CardHeader title={`TITLE`} sx={{fontSize: "20px"}} />
+          <CardHeader title={car.car_make} sx={{fontSize: "20px"}} />
           <CardMedia
             component="img"
             height="250"
-            image="{/**image*/}"
-            alt={`YEAR MAKE MODEL`}
+            image={car.image}
+            alt={car.car_model}
           />
           <CardContent>
             <Typography variant="h5" color="text.secondary" align="center">
-              ${/**PRICE */}
+              ${car.price}
             </Typography>
           </CardContent>
           <CardContent>
-            <Typography paragraph>Condition: {/** */}</Typography>
-            <Typography paragraph>Mileage: {/** */}</Typography>
-            <Typography paragraph>Color: {/** */}</Typography>
+            <Typography paragraph>Condition: {car.condition}</Typography>
+            <Typography paragraph>Mileage: {car.mileage}</Typography>
+            <Typography paragraph>Color: {car.color}</Typography>
           </CardContent>
           <CardContent className="flex justify-around">
             <Button variant="contained">Edit</Button>

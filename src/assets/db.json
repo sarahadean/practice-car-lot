@@ -98,6 +98,17 @@
       "image": "https://images.autotrader.com/hn/c/9c2d681a1003464ca91e101378c9f19f.jpg",
       "color": "White",
       "id": 9
+    },
+    {
+      "car_model_year": "2023",
+      "car_make": "Jeep",
+      "car_model": "Grand Cherokee L",
+      "price": "1000000",
+      "condition": "new",
+      "mileage": "1mi",
+      "color": "silver",
+      "image": "onSubmit={(e) => handleSubmit(e)} ",
+      "id": 10
     }
   ]
 }
